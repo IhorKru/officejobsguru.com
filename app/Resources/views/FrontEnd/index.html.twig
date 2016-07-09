@@ -1,627 +1,635 @@
 {% extends "base.html.twig" %}
 
-{% block form %}
-    <!-- subscription form -->
-    <div class="subscribe-form" style="text-align:center; padding-top:5%;">
-            <div class= "row">
-                    <div class="input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 text-center margin-f">
+{% block slider %}
+    <!-- Begin text carousel intro section -->
+    <section id="text-carousel-intro-section" class="parallax" data-stellar-background-ratio="0.5" style="background-image: url(../img/slider-bg.jpg);">
+        <div class="container">
+            <div class="caption text-center text-white" data-stellar-ratio="0.7">
+                <div id="owl-intro-text" class="owl-carousel">
+                    <div class="item">
+                        <h1>Top SSC positions available</h1>
+                        <p>Job opportunities in shared services for top companies</p>
+                    </div>
+                    <div class="item">
+                        <h1>Office jobs advice & more</h1>
+                        <p>Always be on top of the latest trends & policies</p>
+                    </div>
+                    <div class="item">
+                        <h1>Smart choice for smart people</h1>
+                        <p>Never miss you next perfect job opportunity</p>
+                    </div>
+                </div>
+                <!-- subscription form -->
+                <div class="subscribe-form" style="text-align:center; padding-top:5%;">
+                    <div class= "row">
+                        <div class="input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 text-center margin-f">
                             <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
                             <input class="form-control" type="text" placeholder="First Name">
-                    </div>
-                    <div class="input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 text-center margin-f">
-                            <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                            <input class="form-control" type="text" placeholder="Last Name">
-                            </div>	
-                    <div class="input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 text-center margin-f">
-                            <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-                            <input class="form-control" type="text" placeholder="Email address">
-                    </div>
-                    <div class="input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 text-center margin-f">
-                        <span class="input-group-addon"><i class="fa fa-phone fa-fw"></i></span>
-                        <input class="form-control" type="text" placeholder="Phone">
-                    </div>
-                    <div class="input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 text-center margin-f">
-                        <span class="input-group-addon"><i class="fa fa-male fa-fw"></i></span>
-                        <input class="form-control" type="list" placeholder="Age">
-                    </div>
-                    <div class="picklist-style">
-                        <div class="checkbox input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
-                                <label><input type="checkbox" value="">I have read and agreed to Terms &amp Conditions</label>
                         </div>
-                        <div class="checkbox input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
-                                <label><input type="checkbox" value="">I would like to recieve emails from OfficeJobsGuru.com</label>
+                        <div class="input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 text-center margin-f">
+                                <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                                <input class="form-control" type="text" placeholder="Last Name">
+                                </div>	
+                        <div class="input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 text-center margin-f">
+                                <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                                <input class="form-control" type="text" placeholder="Email address">
                         </div>
-                        <div class="checkbox input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
-                                <label><input type="checkbox" value="">I would like to recieve emails from partners of OfficeJobsGuru.com</label>
+                        <div class="input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 text-center margin-f">
+                                <span class="input-group-addon"><i class="fa fa-phone fa-fw"></i></span>
+                                <input class="form-control" type="text" placeholder="Phone">
                         </div>
-                    </div>
-                    <div style="padding-top:1%; padding-bottom:8%;">
+                        <div class="input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 text-center margin-f">
+                            <span class="input-group-addon"><i class="fa fa-male fa-fw"></i></span>
+                            <input class="form-control" type="list" placeholder="Age">
+                        </div>
+                        <div class="picklist-style">
+                            <div class="checkbox input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
+                                    <label><input type="checkbox" value="">I have read and agreed to Terms &amp Conditions</label>
+                            </div>
+                            <div class="checkbox input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
+                                    <label><input type="checkbox" value="">I would like to recieve emails from OfficeJobsGuru.com</label>
+                            </div>
+                            <div class="checkbox input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
+                                    <label><input type="checkbox" value="">I would like to recieve emails from partners of OfficeJobsGuru.com</label>
+                            </div>
+                        </div>
+                        <div style="padding-top:1%; padding-bottom:8%;">
                             <button type="button" class="smoothScroll btn btn-danger sb-button">Subscribe to join</button>
+                        </div>
                     </div>
-            </div>
-    </div>
+                </div>
+            </div> <!-- /.caption -->
+        </div> <!-- /.container -->
+    </section>
+    <!-- End text carousel intro section -->
 {% endblock %}
 
 {% block body %}
     <!-- Begin about section -->
-			<section id="about-section" class="page bg-style1">
-                <!-- Begin page header-->
-                <div class="page-header-wrapper">
-                    <div class="container">
-                        <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
-                            <h2>About Us</h2>
-                            <div class="devider"></div>
-                            <p class="subtitle">what we do and how we do it</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End page header-->
-
-                <!-- Begin rotate box-1 -->
-                <div class="rotate-box-1-wrapper">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-6">
-                                <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0">
-                                    <span class="rotate-box-icon"><i class="fa fa-users"></i></span>
-                                    <div class="rotate-box-info">
-                                        <h4>Who We Are?</h4>
-                                        <p>OfficeJobsGuru.com is a subscription based marketing platform, dedicated to job opportunities primarily at the office site (Finance, IT etc.)</p>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6">
-                                <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0.2s">
-                                    <span class="rotate-box-icon"><i class="fa fa-diamond"></i></span>
-                                    <div class="rotate-box-info">
-                                        <h4>What We Do?</h4>
-                                        <p>We connect our constantly growing subscriber base to job opportunities as well as trainings related to employability, jobs etc.</p>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6">
-                                <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0.4s">
-                                    <span class="rotate-box-icon"><i class="fa fa-heart"></i></span>
-                                    <div class="rotate-box-info">
-                                        <h4>Why We Do It?</h4>
-                                        <p>Because we know jobs are important. And what more important is to do what you love and to love what you do</p>
-                                    </div>
-                                </a>
-                            </div>
-                            
-                            <div class="col-md-3 col-sm-6">
-                                <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0.6s">
-                                    <span class="rotate-box-icon"><i class="fa fa-envelope-o"></i></span>
-                                    <div class="rotate-box-info">
-                                        <h4>How we do it?</h4>
-                                        <p>We are using modern comminucation lines, like email or mobile, to always keep you updated latest news & opportunities</p>
-                                    </div>
-                                </a>
-                            </div>
-                            
-                        </div> <!-- /.row -->
-                    </div> <!-- /.container -->
-                </div>
-                <!-- End rotate box-1 -->
-                
-                <div class="extra-space-l"></div>
-                
-                <!-- Begin page header--> 
-                <div class="page-header-wrapper">
-                    <div class="container">
-                        <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
-                            <h4>Our Skills</h4>
-                        </div>
-                    </div>
-                </div>
-                <!-- End page header-->
-                
-                <!-- Begin Our Skills -->
-                <div class="our-skills">
-                	<div class="container">
-                    	<div class="row">
-                        
-                            <div class="col-sm-6">
-                                <div class="skill-bar wow slideInLeft" data-wow-delay="0.2s">
-                                    <div class="progress-lebel">
-                                        <h6>Campaign matching</h6>
-                                    </div>
-                                    <div class="progress">
-                                      <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-                                      </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-sm-6">
-                                <div class="skill-bar wow slideInRight" data-wow-delay="0.2s">
-                                    <div class="progress-lebel">
-                                        <h6>Data accuracy</h6>
-                                    </div>
-                                    <div class="progress">
-                                      <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-                                      </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-sm-6">
-                                <div class="skill-bar wow slideInLeft" data-wow-delay="0.4s">
-                                    <div class="progress-lebel">
-                                        <h6>Offer reliability</h6>
-                                    </div>
-                                    <div class="progress">
-                                      <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-                                      </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-sm-6">
-                                <div class="skill-bar wow slideInRight" data-wow-delay="0.4s">
-                                    <div class="progress-lebel">
-                                        <h6>Care Level</h6>
-                                    </div>
-                                    <div class="progress">
-                                      <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-                                      </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div> <!-- /.row -->
-                    </div> <!-- /.container -->
-                </div>
-                <!-- End Our Skill -->
-          </section>
-          <!-- End about section -->
-
-          <!-- Begin cta -->
-          <section id="cta-section">
-          	<div class="cta">
-            	<div class="container">
-                	<div class="row">
-                    
-                    	<div class="col-md-9">
-                            <h1>Become a Subscriber</h1>
-                            <p>By joining OfficeJobsGuru.com family, you are entering a world full of job opportunities, exiting trainings, and loads of vital content, that would help you improve your employability, 
-                               knowledge and market awareness</p>
-                        </div>
-                        
-                        <div class="col-md-3">
-                            <div class="cta-btn wow bounceInRight" data-wow-delay="0.4s">
-                                <a class="btn btn-default btn-lg" href="#text-carousel-intro-section" role="button">Subscribe Now</a>
-                            </div>
-                        </div>
-                        
-                    </div> <!-- /.row -->
-                </div> <!-- /.container -->
+    <section id="about-section" class="page bg-style1">
+    <!-- Begin page header-->
+    <div class="page-header-wrapper">
+        <div class="container">
+            <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+                <h2>About Us</h2>
+                <div class="devider"></div>
+                <p class="subtitle">what we do and how we do it</p>
             </div>
-          </section>
-          <!-- End cta -->
+        </div>
+    </div>
 
-             
-            <!-- Begin Services -->
-            <section id="services-section" class="page text-center">
+<!-- Begin rotate box-1 -->
+<div class="rotate-box-1-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0">
+                    <span class="rotate-box-icon"><i class="fa fa-users"></i></span>
+                    <div class="rotate-box-info">
+                        <h4>Who We Are?</h4>
+                        <p>OfficeJobsGuru.com is a subscription based marketing platform, dedicated to job opportunities primarily at the office site (Finance, IT etc.)</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0.2s">
+                    <span class="rotate-box-icon"><i class="fa fa-diamond"></i></span>
+                    <div class="rotate-box-info">
+                        <h4>What We Do?</h4>
+                        <p>We connect our constantly growing subscriber base to job opportunities as well as trainings related to employability, jobs etc.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0.4s">
+                    <span class="rotate-box-icon"><i class="fa fa-heart"></i></span>
+                    <div class="rotate-box-info">
+                        <h4>Why We Do It?</h4>
+                        <p>Because we know jobs are important. And what more important is to do what you love and to love what you do</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0.6s">
+                    <span class="rotate-box-icon"><i class="fa fa-envelope-o"></i></span>
+                    <div class="rotate-box-info">
+                        <h4>How we do it?</h4>
+                        <p>We are using modern comminucation lines, like email or mobile, to always keep you updated latest news & opportunities</p>
+                    </div>
+                </a>
+            </div>
+
+        </div> <!-- /.row -->
+    </div> <!-- /.container -->
+</div>
+<!-- End rotate box-1 -->
+
+<div class="extra-space-l"></div>
+
+<!-- Begin page header--> 
+<div class="page-header-wrapper">
+    <div class="container">
+        <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+            <h4>Our Skills</h4>
+        </div>
+    </div>
+</div>
+<!-- End page header-->
+
+<!-- Begin Our Skills -->
+<div class="our-skills">
+        <div class="container">
+        <div class="row">
+
+            <div class="col-sm-6">
+                <div class="skill-bar wow slideInLeft" data-wow-delay="0.2s">
+                    <div class="progress-lebel">
+                        <h6>Campaign matching</h6>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="skill-bar wow slideInRight" data-wow-delay="0.2s">
+                    <div class="progress-lebel">
+                        <h6>Data accuracy</h6>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="skill-bar wow slideInLeft" data-wow-delay="0.4s">
+                    <div class="progress-lebel">
+                        <h6>Offer reliability</h6>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="skill-bar wow slideInRight" data-wow-delay="0.4s">
+                    <div class="progress-lebel">
+                        <h6>Care Level</h6>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- /.row -->
+    </div> <!-- /.container -->
+</div>
+<!-- End Our Skill -->
+</section>
+<!-- End about section -->
+
+<!-- Begin cta -->
+<section id="cta-section">
+    <div class="cta">
+        <div class="container">
+                <div class="row">
+
+                <div class="col-md-9">
+                    <h1>Become a Subscriber</h1>
+                <p>By joining OfficeJobsGuru.com family, you are entering a world full of job opportunities, exiting trainings, 
+                    and loads of vital content, that would help you improve your employability, knowledge and market awareness</p>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="cta-btn wow bounceInRight" data-wow-delay="0.4s">
+                    <a class="btn btn-default btn-lg" href="#text-carousel-intro-section" role="button">Subscribe Now</a>
+                    </div>
+                </div>
+
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </div>
+</section>
+<!-- End cta -->
+
+<!-- Begin Services -->
+<section id="services-section" class="page text-center">
+    <!-- Begin page header-->
+    <div class="page-header-wrapper">
+        <div class="container">
+            <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                <h2>Services</h2>
+                <div class="devider"></div>
+                <p class="subtitle">what we really know how</p>
+            </div>
+        </div>
+    </div>
+    <!-- End page header-->
+
+    <!-- Begin roatet box-2 -->
+    <div class="rotate-box-2-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0">
+                        <span class="rotate-box-icon"><i class="fa fa-mobile"></i></span>
+                        <div class="rotate-box-info">
+                            <h4>Job Marketing</h4>
+                            <p>We are constantly working with existing partners to increase the pool of jobs available within our e-campaigns.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.2s">
+                        <span class="rotate-box-icon"><i class="fa fa-pie-chart"></i></span>
+                        <div class="rotate-box-info">
+                            <h4>Employability campaigns</h4>
+                            <p>Emprove you employability level with one of our monday e-mploy 101 newsletters.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.4s">
+                        <span class="rotate-box-icon"><i class="fa fa-cloud"></i></span>
+                        <div class="rotate-box-info">
+                            <h4>Job Trainings from top Vendors</h4>
+                            <p>Get the best training from top education vendors and learning center for prices close to nothing</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.6s">
+                        <span class="rotate-box-icon"><i class="fa fa-pencil"></i></span>
+                        <div class="rotate-box-info">
+                            <h4>Alternative Employment</h4>
+                            <p>Learn more about latest trends in employmnet market and alway be the one to get more out of your job.</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->                     
+    </div>
+    <!-- End rotate-box-2 -->
+</section>
+<!-- End Services -->
+
+
+<!-- Begin testimonials -->
+<section id="testimonial-section">
+    <div id="testimonial-trigger" class="testimonial text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(../img/testimonial-bg.jpg);">
+        <div class="cover"></div>
+        <!-- Begin page header-->
+        <div class="page-header-wrapper">
+            <div class="container">
+                <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                    <h2>Reviews</h2>
+                    <div class="devider"></div>
+                    <p class="subtitle">What people say about us</p>
+                </div>
+            </div>
+        </div>
+        <!-- End page header-->
+        <div class="container">
+            <div class="testimonial-inner center-block text-center">
+                <div id="owl-testimonial" class="owl-carousel">
+                    <div class="item">
+                        <blockquote>
+                            <p>"This was my first experience with this sort of platform and did outperform my expectation! They know there stuff and I highly recommend them! A+++".</p>
+                            <footer><cite title="Source Title">Tim K</cite></footer>
+                        </blockquote>
+                    </div>
+                    <div class="item">
+                        <blockquote>
+                            <p>"Totally in love with OfficeJobsGuru.com's employability impovement campaigns. Got a better paid job in 3 month after subscription"</p>
+                            <footer><cite title="Source Title">Tiffany Peters</cite></footer>
+                        </blockquote>
+                    </div>
+                    <div class="item">
+                        <blockquote>
+                            <p>"I wasn't able to see much added value in their campaigns at the very start. But in a few month I've rolled into to SCRUM triaining though these guys and got 25% raise
+                                at my current job post completion".</p>
+                            <footer><cite title="Source Title">Mike James</cite></footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End testimonials -->
+
+<!-- Begin Portfolio -->
+<section id="portfolio-section" class="page bg-style1">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="portfolio">
                 <!-- Begin page header-->
                 <div class="page-header-wrapper">
                     <div class="container">
                         <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
-                            <h2>Services</h2>
+                            <h2>Services available</h2>
                             <div class="devider"></div>
-                            <p class="subtitle">what we really know how</p>
+                            <p class="subtitle">Below are only some of the services you can potentially find within our campaigns</p>
                         </div>
                     </div>
                 </div>
                 <!-- End page header-->
-            
-                <!-- Begin roatet box-2 -->
-                <div class="rotate-box-2-wrapper">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-6">
-                                <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0">
-                                    <span class="rotate-box-icon"><i class="fa fa-mobile"></i></span>
-                                    <div class="rotate-box-info">
-                                        <h4>Job Marketing</h4>
-                                        <p>We are constantly working with existing partners to increase the pool of jobs available within our e-campaigns.</p>
-                                    </div>
-                                </a>
-                            </div>
-            
-                            <div class="col-md-3 col-sm-6">
-                                <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.2s">
-                                    <span class="rotate-box-icon"><i class="fa fa-pie-chart"></i></span>
-                                    <div class="rotate-box-info">
-                                        <h4>Employability campaigns</h4>
-                                        <p>Emprove you employability level with one of our monday e-mploy 101 newsletters.</p>
-                                    </div>
-                                </a>
-                            </div>
-            
-                            <div class="col-md-3 col-sm-6">
-                                <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.4s">
-                                    <span class="rotate-box-icon"><i class="fa fa-cloud"></i></span>
-                                    <div class="rotate-box-info">
-                                        <h4>Job Trainings from top Vendors</h4>
-                                        <p>Get the best training from top education vendors and learning center for prices close to nothing</p>
-                                    </div>
-                                </a>
-                            </div>
-                            
-                            <div class="col-md-3 col-sm-6">
-                                <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.6s">
-                                    <span class="rotate-box-icon"><i class="fa fa-pencil"></i></span>
-                                    <div class="rotate-box-info">
-                                        <h4>Alternative Employment</h4>
-                                        <p>Learn more about latest trends in employmnet market and alway be the one to get more out of your job.</p>
-                                    </div>
-                                </a>
-                            </div>
-                            
-                        </div> <!-- /.row -->
-                    </div> <!-- /.container -->                     
-                </div>
-                <!-- End rotate-box-2 -->
-            </section>
-            <!-- End Services -->
-
-			
-            <!-- Begin testimonials -->
-            <section id="testimonial-section">
-                <div id="testimonial-trigger" class="testimonial text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(../img/testimonial-bg.jpg);">
-                    <div class="cover"></div>
-                    <!-- Begin page header-->
-                    <div class="page-header-wrapper">
-                        <div class="container">
-                            <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
-                                <h2>Reviews</h2>
-                                <div class="devider"></div>
-                                <p class="subtitle">What people say about us</p>
-                            </div>
-                        </div>
+                <div class="portfoloi_content_area" >
+                    <div class="portfolio_menu" id="filters">
+                        <ul>
+                            <li class="active_prot_menu"><a href="#porfolio_menu" data-filter="*">all</a></li>
+                            <li><a href="#porfolio_menu" data-filter=".websites">For Begginers</a></li>
+                            <li><a href="#porfolio_menu" data-filter=".webDesign" >Mid-Level</a></li>
+                            <li><a href="#porfolio_menu" data-filter=".appsDevelopment">Advanced</a></li>
+                            <li><a href="#porfolio_menu" data-filter=".GraphicDesign">Trainings</a></li>
+                            <li><a href="#porfolio_menu" data-filter=".responsive">Custom</a></li>
+                        </ul>
                     </div>
-                    <!-- End page header-->
-                    <div class="container">
-                        <div class="testimonial-inner center-block text-center">
-                            <div id="owl-testimonial" class="owl-carousel">
-                                <div class="item">
-                                    <blockquote>
-                                        <p>"This was my first experience with this sort of platform and did outperform my expectation! They know there stuff and I highly recommend them! A+++".</p>
-                                        <footer><cite title="Source Title">Tim K</cite></footer>
-                                    </blockquote>
-                                </div>
-                                <div class="item">
-                                    <blockquote>
-                                        <p>"Totally in love with OfficeJobsGuru.com's employability impovement campaigns. Got a better paid job in 3 month after subscription"</p>
-                                        <footer><cite title="Source Title">Tiffany Peters</cite></footer>
-                                    </blockquote>
-                                </div>
-                                <div class="item">
-                                    <blockquote>
-                                        <p>"I wasn't able to see much added value in their campaigns at the very start. But in a few month I've rolled into to SCRUM triaining though these guys and got 25% raise
-										at my current job post completion".</p>
-                                        <footer><cite title="Source Title">Mike James</cite></footer>
-                                    </blockquote>
+                    <div class="portfolio_content">
+                        <div class="row"  id="portfolio">
+                            <div class="col-xs-12 col-sm-4 appsDevelopment">
+                                <div class="portfolio_single_content">
+                                    <img src="../img/portfolio/p1.jpg" alt="title"/>
+                                    <div>
+                                        <a>Recruitment consulting</a>
+                                        <span>Learn how to look for the right job</span>
+                                        <div style="position:relative; padding-top:10px;">
+                                            <button type="button" class="smoothScroll btn btn-danger sb-button" onclick="location.href='#header'"> Subscribe to join </button>
+                                        </div>	
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- End testimonials -->
-                
-            <!-- Begin Portfolio -->
-            <section id="portfolio-section" class="page bg-style1">
-            	<div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="portfolio">
-                                <!-- Begin page header-->
-                                <div class="page-header-wrapper">
-                                    <div class="container">
-                                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
-                                            <h2>Services available</h2>
-                                            <div class="devider"></div>
-                                            <p class="subtitle">Below are only some of the services you can potentially find within our campaigns</p>
-                                        </div>
+                            <div class="col-xs-12 col-sm-4 GraphicDesign">
+                                <div class="portfolio_single_content">
+                                    <img src="../img/portfolio/p2.jpg" alt="title"/>
+                                    <div>
+                                        <a>Job Offers in your email</a>
+                                        <span>Get job offers from top vendors in your email</span>
+                                        <div style="position:relative; padding-top:10px;">
+                                            <button type="button" class="smoothScroll btn btn-danger sb-button" onclick="location.href='#header'"> Subscribe to join </button>
+                                        </div>	
                                     </div>
                                 </div>
-                                <!-- End page header-->
-                                <div class="portfoloi_content_area" >
-                                    <div class="portfolio_menu" id="filters">
-                                        <ul>
-                                            <li class="active_prot_menu"><a href="#porfolio_menu" data-filter="*">all</a></li>
-                                            <li><a href="#porfolio_menu" data-filter=".websites">For Begginers</a></li>
-                                            <li><a href="#porfolio_menu" data-filter=".webDesign" >Mid-Level</a></li>
-                                            <li><a href="#porfolio_menu" data-filter=".appsDevelopment">Advanced</a></li>
-                                            <li><a href="#porfolio_menu" data-filter=".GraphicDesign">Trainings</a></li>
-                                            <li><a href="#porfolio_menu" data-filter=".responsive">Custom</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="portfolio_content">
-                                        <div class="row"  id="portfolio">
-                                            <div class="col-xs-12 col-sm-4 appsDevelopment">
-                                                <div class="portfolio_single_content">
-                                                    <img src="../img/portfolio/p1.jpg" alt="title"/>
-                                                    <div>
-                                                        <a>Recruitment consulting</a>
-                                                        <span>Learn how to look for the right job</span>
-                                                        <div style="position:relative; padding-top:10px;">
-                                                                <button type="button" class="smoothScroll btn btn-danger sb-button" onclick="location.href='#header'"> Subscribe to join </button>
-                                                        </div>	
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 GraphicDesign">
-                                                <div class="portfolio_single_content">
-                                                    <img src="../img/portfolio/p2.jpg" alt="title"/>
-                                                    <div>
-                                                        <a>Job Offers in your email</a>
-                                                        <span>Get job offers from top vendors in your email</span>
-                                                        <div style="position:relative; padding-top:10px;">
-                                                                <button type="button" class="smoothScroll btn btn-danger sb-button" onclick="location.href='#header'"> Subscribe to join </button>
-                                                        </div>	
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 responsive">
-                                                <div class="portfolio_single_content">
-                                                    <img src="../img/portfolio/p3.jpg" alt="title"/>
-                                                    <div>
-                                                        <a>Online trainings</a>
-                                                        <span>Get access to remote trainings from top vendors</span>
-                                                        <div style="position:relative; padding-top:10px;">
-                                                                <button type="button" class="smoothScroll btn btn-danger sb-button" onclick="location.href='#header'"> Subscribe to join </button>
-                                                        </div>		
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 webDesign websites">
-                                                <div class="portfolio_single_content">
-                                                    <img src="../img/portfolio/p4.jpg" alt="title"/>
-                                                    <div>
-                                                        <a>Resume review</a>
-                                                        <span>Get your resume reviewed by leading recruitment companies to improve your employability</span>
-                                                        <div style="position:relative; padding-top:10px;">
-                                                                <button type="button" class="smoothScroll btn btn-danger sb-button" onclick="location.href='#header'"> Subscribe to join </button>
-                                                        </div>	
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 appsDevelopment websites">
-                                                <div class="portfolio_single_content">
-                                                    <img src="../img//portfolio/p5.jpg" alt="title"/>
-                                                    <div>
-                                                        <a>Joy of Independence</a>
-                                                        <span>Be flexible in terms of offers you react to, whether it is sent by a recruiter of HR department</span>
-														<div style="position:relative; padding-top:10px;">
-															<button type="button" class="smoothScroll btn btn-danger sb-button" onclick="location.href='#header'"> Subscribe to join </button>
-														</div>	
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 GraphicDesign">
-                                                <div class="portfolio_single_content">
-                                                    <img src="../img/portfolio/p6.jpg" alt="title"/>
-                                                    <div>
-                                                        <a>Advanced technology working for you</a>
-                                                        <span>Get the benefit of advanced technology working to satisfy your jobsearch needs</span>
-														<div style="position:relative; padding-top:10px;">
-															<button type="button" class="smoothScroll btn btn-danger sb-button" onclick="location.href='#header'"> Subscribe to join </button>
-														</div>	
-                                                    </div>
-                                                </div>
-                                            </div>
-											<div class="col-xs-12 col-sm-4 responsive">
-                                                <div class="portfolio_single_content">
-                                                    <img src="../img/portfolio/p7.jpg" alt="title"/>
-                                                    <div>
-                                                        <a>Be the first to get it</a>
-                                                        <span>Increase your chances to get hired by getting to the job offer first</span>
-														<div style="position:relative; padding-top:10px;">
-															<button type="button" class="smoothScroll btn btn-danger sb-button" onclick="location.href='#header'"> Subscribe to join </button>
-														</div>	
-                                                    </div>
-                                                </div>
-                                            </div>
-										    <div class="col-xs-12 col-sm-4 responsive">
-                                                <div class="portfolio_single_content">
-                                                    <img src="../img/portfolio/p8.jpg" alt="title"/>
-                                                    <div>
-                                                        <a>Wide industrial coverage</a>
-                                                        <span>Do not limit yourself to job opportunities within just one industry</span>
-														<div style="position:relative; padding-top:10px;">
-															<button type="button" class="smoothScroll btn btn-danger sb-button" onclick="location.href='#header'"> Subscribe to join </button>
-														</div>	
-                                                    </div>
-                                                </div>
-                                            </div>
-											<div class="col-xs-12 col-sm-4 responsive">
-                                                <div class="portfolio_single_content">
-                                                    <img src="../img/portfolio/p9.jpg" alt="title"/>
-                                                    <div>
-                                                        <a>Single email - multiple offers</a>
-                                                        <span>Enjoy variety of offers within our premium campaigns</span>
-														<div style="position:relative; padding-top:10px;">
-															<button type="button" class="smoothScroll btn btn-danger sb-button" onclick="location.href='#header'"> Subscribe to join </button>
-														</div>	
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 responsive">
+                                <div class="portfolio_single_content">
+                                    <img src="../img/portfolio/p3.jpg" alt="title"/>
+                                    <div>
+                                        <a>Online trainings</a>
+                                        <span>Get access to remote trainings from top vendors</span>
+                                        <div style="position:relative; padding-top:10px;">
+                                            <button type="button" class="smoothScroll btn btn-danger sb-button" onclick="location.href='#header'"> Subscribe to join </button>
+                                        </div>		
                                     </div>
                                 </div>
-                            
+                            </div>
+                            <div class="col-xs-12 col-sm-4 webDesign websites">
+                                <div class="portfolio_single_content">
+                                    <img src="../img/portfolio/p4.jpg" alt="title"/>
+                                    <div>
+                                        <a>Resume review</a>
+                                        <span>Get your resume reviewed by leading recruitment companies to improve your employability</span>
+                                        <div style="position:relative; padding-top:10px;">
+                                            <button type="button" class="smoothScroll btn btn-danger sb-button" onclick="location.href='#header'"> Subscribe to join </button>
+                                        </div>	
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 appsDevelopment websites">
+                                <div class="portfolio_single_content">
+                                    <img src="../img//portfolio/p5.jpg" alt="title"/>
+                                    <div>
+                                        <a>Joy of Independence</a>
+                                        <span>Be flexible in terms of offers you react to, whether it is sent by a recruiter of HR department</span>
+                                        <div style="position:relative; padding-top:10px;">
+                                            <button type="button" class="smoothScroll btn btn-danger sb-button" onclick="location.href='#header'"> Subscribe to join </button>
+                                        </div>	
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 GraphicDesign">
+                                <div class="portfolio_single_content">
+                                    <img src="../img/portfolio/p6.jpg" alt="title"/>
+                                    <div>
+                                        <a>Advanced technology working for you</a>
+                                        <span>Get the benefit of advanced technology working to satisfy your jobsearch needs</span>
+                                        <div style="position:relative; padding-top:10px;">
+                                            <button type="button" class="smoothScroll btn btn-danger sb-button" onclick="location.href='#header'"> Subscribe to join </button>
+                                        </div>	
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 responsive">
+                                <div class="portfolio_single_content">
+                                    <img src="../img/portfolio/p7.jpg" alt="title"/>
+                                    <div>
+                                        <a>Be the first to get it</a>
+                                        <span>Increase your chances to get hired by getting to the job offer first</span>
+                                        <div style="position:relative; padding-top:10px;">
+                                            <button type="button" class="smoothScroll btn btn-danger sb-button" onclick="location.href='#header'"> Subscribe to join </button>
+                                        </div>	
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 responsive">
+                                <div class="portfolio_single_content">
+                                    <img src="../img/portfolio/p8.jpg" alt="title"/>
+                                    <div>
+                                        <a>Wide industrial coverage</a>
+                                        <span>Do not limit yourself to job opportunities within just one industry</span>
+                                        <div style="position:relative; padding-top:10px;">
+                                            <button type="button" class="smoothScroll btn btn-danger sb-button" onclick="location.href='#header'"> Subscribe to join </button>
+                                        </div>	
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 responsive">
+                                <div class="portfolio_single_content">
+                                    <img src="../img/portfolio/p9.jpg" alt="title"/>
+                                    <div>
+                                        <a>Single email - multiple offers</a>
+                                        <span>Enjoy variety of offers within our premium campaigns</span>
+                                        <div style="position:relative; padding-top:10px;">
+                                            <button type="button" class="smoothScroll btn btn-danger sb-button" onclick="location.href='#header'"> Subscribe to join </button>
+                                        </div>	
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- End portfolio -->
-            
-                
-            <!-- Begin counter up -->
-            <section id="counter-section">                					
-				<div id="counter-up-trigger" class="counter-up text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/counter-bg.jpg);">
-					<div class="cover"></div>
-                    <!-- Begin page header-->
-                    <div class="page-header-wrapper">
-                        <div class="container">
-                            <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
-                                <h2>Some Fun Facts</h2>
-                                <div class="devider"></div>
-                                <p class="subtitle">Before anyone is not told</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End page header-->
-					<div class="container">
 
-						<div class="row">
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- End portfolio -->
 
-							<div class="fact text-center col-md-3 col-sm-6">
-								<div class="fact-inner">
-									<i class="fa fa-users fa-3x"></i>
-                                    <div class="extra-space-l"></div>
-									<span class="counter">263589</span>
-									<p class="lead">People subscribed &amp growing</p>
-								</div>
-							</div>
-
-							<div class="fact text-center col-md-3 col-sm-6">
-								<div class="fact-inner">
-									<i class="fa fa-leaf fa-3x"></i>
-                                    <div class="extra-space-l"></div>
-									<span class="counter">784</span>
-									<p class="lead">Deployed campaigns &amp counting</p>
-								</div>
-							</div>
-
-							<div class="fact text-center col-md-3 col-sm-6">
-								<div class="fact-inner">
-									<i class="fa fa-trophy fa-3x"></i>
-                                    <div class="extra-space-l"></div>
-									<span class="counter">74</span>
-									<p class="lead">Vendors &amp Growing</p>
-								</div>
-							</div>
-
-							<div class="fact last text-center col-md-3 col-sm-6">
-								<div class="fact-inner">
-									<i class="fa fa-coffee fa-3x"></i>
-                                    <div class="extra-space-l"></div>
-									<span class="counter">1100</span>
-									<p class="lead">Cups of coffee drinking</p>
-								</div>
-							</div>
-
-						</div> <!-- /.row -->
-					</div> <!-- /.container -->
-				</div>
-            </section>
-			<!-- End counter up -->
-                
-
-            <!-- Begin prices section -->
-			<section id="prices-section" class="page">
-
-                <!-- Begin page header-->
-                <div class="page-header-wrapper">
-                    <div class="container">
-                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
-                            <h2>Reasons to Join OfficeJobsGuru.com </h2>
-                            <div class="devider"></div>
-                            <p class="subtitle">Why join us</p>
-                        </div>
+<!-- Begin counter up -->
+<section id="counter-section">                					
+<div id="counter-up-trigger" class="counter-up text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(../img/counter-bg.jpg);">
+    <div class="cover"></div>
+        <!-- Begin page header-->
+        <div class="page-header-wrapper">
+            <div class="container">
+                <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                    <h2>Some Fun Facts</h2>
+                    <div class="devider"></div>
+                    <p class="subtitle">Before anyone is not told</p>
+                </div>
+            </div>
+        </div>
+        <!-- End page header-->
+        <div class="container">
+            <div class="row">
+                <div class="fact text-center col-md-3 col-sm-6">
+                    <div class="fact-inner">
+                        <i class="fa fa-users fa-3x"></i>
+                        <div class="extra-space-l"></div>
+                        <span class="counter">263589</span>
+                        <p class="lead">People subscribed &amp growing</p>
                     </div>
                 </div>
-                <!-- End page header-->
+                <div class="fact text-center col-md-3 col-sm-6">
+                    <div class="fact-inner">
+                        <i class="fa fa-leaf fa-3x"></i>
+                        <div class="extra-space-l"></div>
+                        <span class="counter">784</span>
+                        <p class="lead">Deployed campaigns &amp counting</p>
+                    </div>
+                </div>
+                <div class="fact text-center col-md-3 col-sm-6">
+                    <div class="fact-inner">
+                        <i class="fa fa-trophy fa-3x"></i>
+                        <div class="extra-space-l"></div>
+                        <span class="counter">74</span>
+                        <p class="lead">Vendors &amp Growing</p>
+                    </div>
+                </div>
+                <div class="fact last text-center col-md-3 col-sm-6">
+                    <div class="fact-inner">
+                        <i class="fa fa-coffee fa-3x"></i>
+                        <div class="extra-space-l"></div>
+                            <span class="counter">1100</span>
+                            <p class="lead">Cups of coffee drinking</p>
+                    </div>
+                </div>
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </div>
+</section>
+<!-- End counter up -->
 
-				<div class="extra-space-l"></div>
 
-				<!-- Begin prices -->
-				<div class="prices">
-					<div class="container">
-						<div class="row">
-							
-							<div class="price-box col-sm-6 col-md-3 wow flipInY" data-wow-delay="0.3s">
-								<div class="panel panel-default">
-									<div class="panel-heading text-center">
-										<i class="fa fa-plug fa-2x"></i>
-										<h3>Get a job you want</h3>
-									</div>
-									<div class="panel-body text-center">
-										<p class="lead"><strong>Because you deserve it</strong></p>
-									</div>
-									<div style="padding: 3px 10px; text-align:center;">
-										<p>Though our high added value employability e-campaigns we can assist you with getting the job you want because we know how tough can it be to get though the shortlisting process sometimes.</p>
-										<p>Once you are a member, you can get access to exclusive insider info from top recruitment companies so once the interview pops up, you'll be 100% ready for it. </p>
-									</div>
-								</div>										
-							</div>
+<!-- Begin prices section -->
+<section id="prices-section" class="page">
 
-							<div class="price-box col-sm-6 col-md-3 wow flipInY" data-wow-delay="0.5s">
-								<div class="panel panel-default">
-									<div class="panel-heading text-center">
-										<i class="fa fa-cog fa-2x"></i>
-										<h3>Get promoted</h3>
-									</div>
-									<div class="panel-body text-center">
-										<p class="lead"><strong>Because you worked for it</strong></p>
-									</div>
-									<div style="padding: 3px 10px; text-align:center;">
-										<p>Here at <strong> OfficeJobsGuru.com </strong> we know how hard it is sometimes to get noticed by your manager to get that promotion you have worked for so long and so hard. Never miss a day again.</p>
-										<p>Get our hands-on guidance & advice on how to get noticed within your office space and get to your next career the quickest </p>
-										<br>
-										<p> <strong> We are there for you! </strong> </p>
-									</div>
-								</div>										
-							</div>
-							
-							<div class="price-box col-sm-6 price-box-featured col-md-3 wow flipInY" data-wow-delay="0.7s">
-								<div class="panel panel-default">
-									<div class="panel-heading text-center">
-										<i class="fa fa-star fa-2x"></i>
-										<h3>Get noticed by recruiters</h3>
-									</div>
-									<div class="panel-body text-center">
-										<p class="lead"><strong>Because they will help</strong></p>
-									</div>
-									<div style="padding: 3px 10px; text-align:center;">
-										<p>Getting a recruiter on a speed dial is a very importnat however rather challenging thing to get by - we know it cause we have been there.</p>
-										<p><strong> OfficeJobsGuru.com </strong> can teach you how to get noticed by top recruitement companies in the way, they will never skip your CV looking for the perfect candidate.</p>
-										<br>
-										<p> <strong> We are here to assist! </strong> </p>
-									</div>
-									<div class="price-box-ribbon"><strong>Popular</strong></div>
-								</div>										
-							</div>
-							
-							<div class="price-box col-sm-6 col-md-3 wow flipInY" data-wow-delay="0.9s">
-								<div class="panel panel-default">
-									<div class="panel-heading text-center">
-										<i class="fa fa-plus fa-2x"></i>
-										<h3>Never miss a deal</h3>
-									</div>
-									<div class="panel-body text-center">
-										<p class="lead"><strong>Because every one can be your next</strong></p>
-									</div>
-									<div style="padding: 3px 10px; text-align:center;">
-										<p>In the day-to-day life every one of us get's a job offer every now and then, but most of those do not get deserved attention from us. By becoming a member of OfficeJobsGuru.com you will not only get the first on access career opportunities, but also will learn how to select the one that is yours and not to waste time on other ones.</p>
-										<br>
-										<p> <strong> We are here to deliver! </strong> </p>
-									</div>
-								</div>										
-							</div>
-							
-						</div> <!-- /.row -->
-					</div> <!-- /.container -->
-				</div>
-				<!-- End prices -->
-				<div class="extra-space-l"></div>
-			</section>
-			<!-- End prices section -->     
+    <!-- Begin page header-->
+    <div class="page-header-wrapper">
+        <div class="container">
+            <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                <h2>Reasons to Join OfficeJobsGuru.com </h2>
+                <div class="devider"></div>
+                <p class="subtitle">Why join us</p>
+            </div>
+        </div>
+    </div>
+    <!-- End page header-->
+
+    <div class="extra-space-l"></div>
+
+    <!-- Begin prices -->
+    <div class="prices">
+        <div class="container">
+            <div class="row">
+                <div class="price-box col-sm-6 col-md-3 wow flipInY" data-wow-delay="0.3s">
+                    <div class="panel panel-default">
+                        <div class="panel-heading text-center">
+                            <i class="fa fa-plug fa-2x"></i>
+                            <h3>Get a job you want</h3>
+                        </div>
+                        <div class="panel-body text-center">
+                            <p class="lead"><strong>Because you deserve it</strong></p>
+                        </div>
+                        <div style="padding: 3px 10px; text-align:center;">
+                            <p>Though our high added value employability e-campaigns we can assist you with getting the job you want because we know how tough can it be to get though the shortlisting process sometimes.</p>
+                            <p>Once you are a member, you can get access to exclusive insider info from top recruitment companies so once the interview pops up, you'll be 100% ready for it. </p>
+                        </div>
+                    </div>										
+                </div>
+                <div class="price-box col-sm-6 col-md-3 wow flipInY" data-wow-delay="0.5s">
+                    <div class="panel panel-default">
+                        <div class="panel-heading text-center">
+                            <i class="fa fa-cog fa-2x"></i>
+                            <h3>Get promoted</h3>
+                        </div>
+                        <div class="panel-body text-center">
+                            <p class="lead"><strong>Because you worked for it</strong></p>
+                        </div>
+                        <div style="padding: 3px 10px; text-align:center;">
+                            <p>Here at <strong> OfficeJobsGuru.com </strong> we know how hard it is sometimes to get noticed by your manager to get that promotion you have worked for so long and so hard. Never miss a day again.</p>
+                            <p>Get our hands-on guidance & advice on how to get noticed within your office space and get to your next career the quickest </p>
+                            <br>
+                            <p> <strong> We are there for you! </strong> </p>
+                        </div>
+                    </div>										
+                </div>
+                <div class="price-box col-sm-6 price-box-featured col-md-3 wow flipInY" data-wow-delay="0.7s">
+                    <div class="panel panel-default">
+                        <div class="panel-heading text-center">
+                            <i class="fa fa-star fa-2x"></i>
+                            <h3>Get noticed by recruiters</h3>
+                        </div>
+                        <div class="panel-body text-center">
+                            <p class="lead"><strong>Because they will help</strong></p>
+                        </div>
+                        <div style="padding: 3px 10px; text-align:center;">
+                            <p>Getting a recruiter on a speed dial is a very importnat however rather challenging thing to get by - we know it cause we have been there.</p>
+                            <p><strong> OfficeJobsGuru.com </strong> can teach you how to get noticed by top recruitement companies in the way, they will never skip your CV looking for the perfect candidate.</p>
+                            <br>
+                            <p> <strong> We are here to assist! </strong> </p>
+                        </div>
+                        <div class="price-box-ribbon"><strong>Popular</strong></div>
+                    </div>										
+                </div>
+                <div class="price-box col-sm-6 col-md-3 wow flipInY" data-wow-delay="0.9s">
+                    <div class="panel panel-default">
+                        <div class="panel-heading text-center">
+                            <i class="fa fa-plus fa-2x"></i>
+                            <h3>Never miss a deal</h3>
+                        </div>
+                        <div class="panel-body text-center">
+                            <p class="lead"><strong>Because every one can be your next</strong></p>
+                        </div>
+                        <div style="padding: 3px 10px; text-align:center;">
+                            <p>In the day-to-day life every one of us get's a job offer every now and then, but most of those do not get deserved attention from us. By becoming a member of OfficeJobsGuru.com you will not only get the first on access career opportunities, but also will learn how to select the one that is yours and not to waste time on other ones.</p>
+                            <br>
+                            <p> <strong> We are here to deliver! </strong> </p>
+                        </div>
+                    </div>										
+                </div>
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </div>
+    <!-- End prices -->
+    <div class="extra-space-l"></div>
+</section>
+        <!-- End prices section -->   
 {% endblock %}

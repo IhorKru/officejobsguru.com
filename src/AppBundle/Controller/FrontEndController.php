@@ -53,6 +53,14 @@ class FrontEndController extends Controller
         return $this->render('FrontEnd/unsubscribe.html.twig');
     }
     
+    /**
+    * @Route("/sorryunsubscribe", name="sorryunsubscribe")
+    */
+    public function sorryunsubscribeAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('FrontEnd/sorryunsubscribe.html.twig');
+    }
     
 }
 

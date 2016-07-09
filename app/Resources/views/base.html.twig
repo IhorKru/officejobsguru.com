@@ -56,7 +56,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                       </button>
-                      <a class="navbar-brand page-scroll" href="{{ path('index') }}">OfficeJobsGuru</a>
+                      <a class="navbar-brand page-scroll" href="index.html">OfficeJobsGuru</a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -76,41 +76,19 @@
                 </nav>
                 <!-- End Navbar -->
             </header>
-            <!-- ========= END HEADER =========-->
-            <!-- Begin text carousel intro section -->
-            <section id="text-carousel-intro-section" class="parallax" data-stellar-background-ratio="0.5" style="background-image: url(../img/slider-bg.jpg);">
-                <div class="container">
-                    <div class="caption text-center text-white" data-stellar-ratio="0.7">
-                        <div id="owl-intro-text" class="owl-carousel">
-                            <div class="item">
-                                    <h1>Top SSC positions available</h1>
-                                    <p>Job opportunities in shared services for top companies</p>
-                            </div>
-                            <div class="item">
-                                    <h1>Office jobs advice & more</h1>
-                                    <p>Always be on top of the latest trends & policies</p>
-                            </div>
-                            <div class="item">
-                                    <h1>Smart choice for smart people</h1>
-                                    <p>Never miss you next perfect job opportunity</p>
-                            </div>
-                        </div>
-                        {% block form %} {% endblock %}
-                    </div> <!-- /.caption -->
-                </div> <!-- /.container -->
-            </section>
-
             
-                
-	<!-- End text carousel intro section -->
+        <!-- ========= END HEADER =========-->
+        <!-- ========= START SLIDER SECTION ===== -->
+        {% block slider %} {% endblock %}
         
-        
+        <!-- ======= start main section === -->
         {% block body %}{% endblock %}
         
         <!-- Begin contact section -->
-        <section id="contact-section" class="page text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(../img/map-bg.jpg);">
+	<section id="contact-section" class="page text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(../img/map-bg.jpg);">
             <div class="cover"></div>
-                 <!-- Begin page header-->
+            
+                <!-- Begin page header-->
                 <div class="page-header-wrapper">
                     <div class="container">
                         <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
@@ -125,6 +103,7 @@
                 <div class="contact wow bounceInRight" data-wow-delay="0.4s">
                     <div class="container">
                     	<div class="row">
+                        
                             <div class="col-sm-6">
                                 <div class="contact-info">
                                     <h4>Our Address</h4>
@@ -137,9 +116,10 @@
                                     </ul>
                                 </div>
                             </div>
+                        
                             <div class="col-sm-6">
                                 <div class="contact-form">
-                                	<h4>Write to us</h4>
+                                    <h4>Write to us</h4>
                                     <form role="form">
                                         <div class="form-group">
                                             <input type="text" class="form-control input-lg" placeholder="Your Name" required>
@@ -156,7 +136,7 @@
                                         <button type="submit" class="btn wow bounceInRight" data-wow-delay="0.8s">Send</button>
                                     </form>
                                 </div>	
-                            </div>                                          
+                            </div>                                        
                         </div> <!-- /.row -->
                     </div> <!-- /.container -->
                 </div>
@@ -169,7 +149,6 @@
                 <div class="footer-top">
                 	<div class="container">
                     	<div class="row wow bounceInLeft" data-wow-delay="0.4s">
-
                             <div class="col-sm-6 col-md-4">
                             	<h4>Useful Links</h4>
                                 <ul class="imp-links">
@@ -216,7 +195,7 @@
             <!-- End footer -->
 
             <a href="#" class="scrolltotop"><i class="fa fa-arrow-up"></i></a> <!-- Scroll to top button -->
-            
+        
         {% block javascripts %}
             <script src="{{ asset('inc/jquery/jquery-1.11.1.min.js') }}"></script>
             <script src="{{ asset('inc/bootstrap/js/bootstrap.min.js') }}"></script>

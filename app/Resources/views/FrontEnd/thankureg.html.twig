@@ -1,5 +1,43 @@
 {% extends "base.html.twig" %}
 
+{% block slider %}
+   <!-- Begin text carousel intro section -->
+    <section id="text-carousel-intro-section" class="parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/slider-bg.jpg); height:50%;">
+        <div class="container">
+            <div class="caption text-center text-white" data-stellar-ratio="0.7" style="top:200px">
+                <div id="owl-intro-text" class="owl-carousel">
+                    <div class="item">
+                        <h1>Top SSC positions available</h1>
+                        <p>Job opportunities in shared services for top companies</p>
+                    </div>
+                    <div class="item">
+                        <h1>Office jobs advice & more</h1>
+                        <p>Always be on top of the latest trends & policies</p>
+                    </div>
+                    <div class="item">
+                        <h1>Smart choice for smart people</h1>
+                        <p>Never miss you next perfect job opportunity</p>
+                    </div>
+                </div>
+            </div> <!-- /.caption -->
+        </div> <!-- /.container -->
+    </section>
+{% endblock %}
+
 {% block body %}
-    this is my index page
+    <section id="about-section" class="page bg-style1">
+        <!-- Begin page header-->
+        <div class="page-header-wrapper">
+            <div class="container">
+                <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+                    <h2>You are 1 step away from becoming part of OfficeJobsGuru.com family.</h2>
+                    <div class="devider"></div>
+                </div>
+                <div class="terms-just">
+                <h3 class="header-terms">Guidelines</h3>
+                <p> 1. As part of the subscription process, an email was sent to email address, indicated in the previous step.</p>
+                <p> 2. <strong> Please check your email and complete subscription process by clicking "Subscribe" button to confirm your wish to subscribe!<strong> </p>
+            </div>
+        </div>
+    </section>	
 {% endblock %}

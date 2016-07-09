@@ -1,5 +1,58 @@
 {% extends "base.html.twig" %}
 
+{% block slider %}
+<!-- Begin text carousel intro section -->
+			<section id="text-carousel-intro-section" class="parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/slider-bg.jpg); height:60%;">
+				
+				<div class="container">
+					<div class="caption text-center text-white" data-stellar-ratio="0.7" style="top:200px">
+						<div id="owl-intro-text" class="owl-carousel">
+							<div class="item">
+								<h1>Top SSC positions available</h1>
+								<p>Job opportunities in shared services for top companies</p>
+							</div>
+							<div class="item">
+								<h1>Office jobs advice & more</h1>
+								<p>Always be on top of the latest trends & policies</p>
+							</div>
+							<div class="item">
+								<h1>Smart choice for smart people</h1>
+								<p>Never miss you next perfect job opportunity</p>
+							</div>
+						</div>
+						<!-- subscription form -->
+						<div class="subscribe-form" style="text-align:center; padding-top:5%;">
+							<div class= "row">
+								<div class="input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 text-center margin-f">
+									<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+									<input class="form-control" type="text" placeholder="Email address">
+								</div>
+								<div style="padding-top:1%; padding-bottom:8%;">
+									<button type="button" class="smoothScroll btn btn-danger sb-button">Unsubscribe</button>
+								</div>
+							</div>
+						</div>
+					</div> <!-- /.caption -->
+				</div> <!-- /.container -->
+			</section>
+			<!-- End text carousel intro section -->
+{% endblock %}
+
 {% block body %}
-    this is my index page
+                    
+    <!-- Begin about section -->
+    <section id="about-section" class="page bg-style1">
+        <!-- Begin page header-->
+        <div class="page-header-wrapper">
+            <div class="container">
+                <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+                    <h2>We are truly sorry you have decided to leave us</h2>
+                    <div class="devider"></div>
+                    <p class="subtitle">Please complete email above to initiate the unsubscribe process</p>
+                </div>
+            </div>
+        </div>
+        <!-- End page header-->
+    </section>
+    
 {% endblock %}
