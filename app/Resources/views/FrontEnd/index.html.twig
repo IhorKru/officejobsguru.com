@@ -22,44 +22,69 @@
                 <!-- subscription form -->
                 <div class="subscribe-form" style="text-align:center; padding-top:5%;">
                     <div class= "row">
+                        
+                        {{ form_start(form1, {'attr': {'novalidate': 'novalidate'}}) }}
                         <div class="input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 text-center margin-f">
                             <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                            <input class="form-control" type="text" placeholder="First Name">
+                                {{ form_label(form1.firstname) }}
+                                {{ form_widget(form1.firstname) }}
                         </div>
                         <div class="input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 text-center margin-f">
-                                <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                                <input class="form-control" type="text" placeholder="Last Name">
-                                </div>	
+                            <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                                {{ form_label(form1.lastname) }}
+                                {{ form_widget(form1.lastname) }}
+                        </div>	
                         <div class="input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 text-center margin-f">
-                                <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-                                <input class="form-control" type="text" placeholder="Email address">
+                            <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                                {{ form_label(form1.emailaddress) }}
+                                {{ form_widget(form1.emailaddress) }}
                         </div>
                         <div class="input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 text-center margin-f">
-                                <span class="input-group-addon"><i class="fa fa-phone fa-fw"></i></span>
-                                <input class="form-control" type="text" placeholder="Phone">
+                            <span class="input-group-addon"><i class="fa fa-phone fa-fw"></i></span>
+                                {{ form_label(form1.phone) }}
+                                {{ form_widget(form1.phone) }}
                         </div>
                         <div class="input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 text-center margin-f">
                             <span class="input-group-addon"><i class="fa fa-male fa-fw"></i></span>
-                            <input class="form-control" type="list" placeholder="Age">
+                                {{ form_label(form1.age) }}
+                                {{ form_widget(form1.age) }}
                         </div>
                         <div class="picklist-style">
                             <div class="checkbox input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
-                                    <label><input type="checkbox" value="">I have read and agreed to Terms &amp Conditions</label>
+                                {{ form_widget(form1.agreeterms) }}
+                                <lable> {{ 'I have read and agreed to ' }} <a href="{{ path('terms') }}" target="_blank"> {{ 'Terms & Conditions' }} </a> </lable>
+                                {{ form_row(form1.agreeterms) }}
                             </div>
                             <div class="checkbox input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
-                                    <label><input type="checkbox" value="">I would like to recieve emails from OfficeJobsGuru.com</label>
+                                {{ form_widget(form1.agreeemails) }}
+                                <lable> {{ 'I want to get emails from OfficeJobsGuru.com' }} </lable>
+                                {{ form_row(form1.agreeemails) }}
                             </div>
                             <div class="checkbox input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
-                                    <label><input type="checkbox" value="">I would like to recieve emails from partners of OfficeJobsGuru.com</label>
+                                {{ form_widget(form1.agreepartners) }}
+                                <lable> {{ 'I want to get mails from Partners of FinSensitive.com' }} </lable>
+                                {{ form_row(form1.agreepartners) }}
                             </div>
                         </div>
-                        <div style="padding-top:1%; padding-bottom:8%;">
-                            <button type="button" class="smoothScroll btn btn-danger sb-button">Subscribe to join</button>
-                        </div>
+                        <div style="padding-top:1%; padding-bottom:8%;">    
+                            {{ form_row(form1.submit, { 'label': 'Subscribe to join' }) }}
+                        </div>    
+                        {{ form_end(form1) }}
                     </div>
                 </div>
             </div> <!-- /.caption -->
         </div> <!-- /.container -->
+        <div class="window-BG" id="alert">
+            <div class="window">
+                <div id="alert-title" class="win-img-text">{{ 'Please solve below errors'|trans }}:</div>
+                <div id="alert-text" class="win-text">
+                    <div style="color: white; text-align: justify;">
+                        {{ form_errors(form1) }}
+                    </div>    
+                </div>
+                <div class="window-close win-close-2">{{ 'Close'|trans }}</div>
+            </div>
+        </div>
     </section>
     <!-- End text carousel intro section -->
 {% endblock %}

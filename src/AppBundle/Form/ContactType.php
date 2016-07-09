@@ -22,7 +22,7 @@ class ContactType extends AbstractType {
                 'error_bubbling' => true,
                 'attr' => [
                     'placeholder' => 'Name',
-                    'class' => 'form-control'
+                    'class' => 'form-control input-lg'
                     ]])
             ->add('emailaddress', EmailType::class, [
                 'label' => false,
@@ -31,7 +31,7 @@ class ContactType extends AbstractType {
                 'attr' => [
                     'placeholder' => 'Email Address',
                     'pattern'     => '.{2,}',//minlength
-                    'class' => 'form-control'
+                    'class' => 'form-control input-lg'
                     ]])
             ->add('subject', TextType::class, [
                 'label' => false,
@@ -39,17 +39,16 @@ class ContactType extends AbstractType {
                 'error_bubbling' => true,
                 'attr' => [
                     'placeholder' => 'Subject',
-                    'class' => 'form-control'
+                    'class' => 'form-control input-lg'
                 ]
             ])
             ->add('message', TextType::class, ['label' => false,
                 'required' => true,
                 'error_bubbling' => true,
                 'attr' => array(
-                    'class' => 'form-control',
-                    'id' => 'message',
+                    'class' => 'form-control input-lg',
                     'placeholder' => 'Message',
-                    'style' => 'height: 7.4em;'
+                    'style' => 'height: 10em;'
                 )])
             ->add('submit', SubmitType::class, [
                 'label' => 'Send Message',

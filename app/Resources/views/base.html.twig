@@ -67,8 +67,9 @@
                             <li><a class="page-scroll" href="#services-section">Services</a></li>
                             <li><a class="page-scroll" href="#portfolio-section">Works</a></li>                         
                             <li><a class="page-scroll" href="#prices-section">Why Us</a></li>
-                            <li><a class="page-scroll" href="{{ path('terms') }}">Terms &amp Conditions</a></li>
+                            <li><a class="page-scroll" href="{{ path('terms') }}">Terms</a></li>
                             <li><a class="page-scroll" href="{{ path('privacy') }}">Privacy</a></li>
+                            <li><a class="page-scroll" href="{{ path('unsubscribe') }}">Unsubscribe</a></li>
                             <li><a class="page-scroll" href="#contact-section">Contact</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
@@ -120,21 +121,26 @@
                             <div class="col-sm-6">
                                 <div class="contact-form">
                                     <h4>Write to us</h4>
-                                    <form role="form">
+                                    {{ form_start(form2, {'attr': {'novalidate': 'novalidate'}}) }}
                                         <div class="form-group">
-                                            <input type="text" class="form-control input-lg" placeholder="Your Name" required>
+                                            {{ form_label(form2.name) }}
+                                            {{ form_widget(form2.name) }}
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" class="form-control input-lg" placeholder="E-mail" required>
+                                            {{ form_label(form2.emailaddress) }}
+                                            {{ form_widget(form2.emailaddress) }}
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control input-lg" placeholder="Subject" required>
+                                            {{ form_label(form2.subject) }}
+                                            {{ form_widget(form2.subject) }}
                                         </div>
                                         <div class="form-group">
-                                            <textarea class="form-control input-lg" rows="5" placeholder="Message" required></textarea>
+                                            {{ form_label(form2.message) }}
+                                            {{ form_widget(form2.message) }}
                                         </div>
-                                        <button type="submit" class="btn wow bounceInRight" data-wow-delay="0.8s">Send</button>
-                                    </form>
+                                        {{ form_row(form2.submit, { 'label': 'SEND US A MESSAGE' }) }}
+                                    {{ form_end(form2) }}
+                                   
                                 </div>	
                             </div>                                        
                         </div> <!-- /.row -->

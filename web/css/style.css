@@ -1158,6 +1158,7 @@ p.subtitle {
 	color:white;
 	font-size:13px;
 	vertical-align:middle;
+        padding-left: 1.8em;
 }
 
 .home-text-tr {
@@ -1183,4 +1184,93 @@ p.subtitle {
 	padding-top:20px;
 	padding-bottom:20px;
 	font-size:20px;
+}
+
+/*error message */
+.window-BG {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    z-index: 20;
+    background: url(../img/overlay.png);
+    padding-top: 5em;
+}
+
+.window-BG.active {
+    display: block;
+}
+
+.window-BG.active .windows-help-table-cell {
+    display: table;
+    width: 100%;
+}
+
+.windows-help-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.win-close-1 {
+    background: #00bff3;
+    width: 90px;
+    height: 39px;
+    float: right;
+    cursor: pointer;
+    font: 16px/40px Arial-narrow;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    behavior: url(border-radius.htc);
+}
+
+.win-close-1:hover {
+    opacity: 0.9;
+}
+
+.win-img {
+    width: 247px;
+    height: 206px;
+    position: absolute;
+    top: 26px;
+    left: 53px;
+}
+
+.win-img-text {
+    font: bold 16px Arial;
+    color: #00bff3;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+.win-text {
+    color: #35414d;
+    font: 16px Arial;
+    padding: 80px 40px 10px 40px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.win-close-2 {
+    width: 193px;
+    height: 51px;
+    cursor: pointer;
+    font: 16px/49px Arial-narrow;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    background: #642891;
+    margin: 37px auto 0;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    behavior: url(border-radius.htc);
 }
