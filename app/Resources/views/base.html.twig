@@ -1,13 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>OfficeJobsGuru | Office Jobs for Office People</title>
+
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        
+        {% block stylesheets %}
+            <!-- Google Fonts  -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'> <!-- Body font -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'> <!-- Navbar font -->
+            <!-- Libs and Plugins CSS -->
+		<link rel="stylesheet" href="{{ asset('inc/bootstrap/css/bootstrap.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('inc/animations/css/animate.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('inc/font-awesome/css/font-awesome.min.css') }}"> 
+            <!-- Font Icons -->
+		<link rel="stylesheet" href="{{ asset('inc/owl-carousel/css/owl.carousel.css') }}">
+		<link rel="stylesheet" href="{{ asset('inc/owl-carousel/css/owl.theme.css') }}">
+
+            <!-- Theme CSS -->
+                <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/mobile.css') }}">
+
+            <!-- Skin CSS -->
+		<!--<link rel="stylesheet" href="{{ asset('css/skin/cool-gray.css') }}">-->
+                <!-- <link rel="stylesheet" href="{{ asset('css/skin/ice-blue.css') }}"> -->
+                <!-- <link rel="stylesheet" href="{{ asset('css/skin/summer-orange.css') }}"> -->
+                <!-- <link rel="stylesheet" href="{{ asset('css/skin/fresh-lime.css') }}"> -->
+                <link rel="stylesheet" href="{{ asset('css/skin/night-purple.css') }}">    
+                
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
-    <body>
+    <body data-spy="scroll" data-target="#main-navbar">
+        <div class="page-loader"></div>  <!-- Display loading image while page loads -->
+    	<div class="body">
+        
+            <!--========== BEGIN HEADER ==========-->
+            <header id="header" class="header-main">
+
+                <!-- Begin Navbar -->
+                <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation"> <!-- Classes: navbar-default, navbar-inverse, navbar-fixed-top, navbar-fixed-bottom, navbar-transparent. Note: If you use non-transparent navbar, set "height: 98px;" to #header -->
+
+                  <div class="container">
+
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand page-scroll" href="index.html">OfficeJobsGuru</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="font-color: #D81508">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a class="page-scroll" href="body">Home</a></li>
+                            <li><a class="page-scroll" href="#about-section">About</a></li>
+                            <li><a class="page-scroll" href="#services-section">Services</a></li>
+                            <li><a class="page-scroll" href="#portfolio-section">Works</a></li>                         
+                            <li><a class="page-scroll" href="#prices-section">Why Us</a></li>
+                            <li><a class="page-scroll" href="#terms-section">Terms &amp Conditions</a></li>
+                            <li><a class="page-scroll" href="#privacy-section">Privacy</a></li>
+                            <li><a class="page-scroll" href="#contact-section">Contact</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                  </div><!-- /.container -->
+                </nav>
+                <!-- End Navbar -->
+            </header>
+            <!-- ========= END HEADER =========-->
+            <!-- Begin text carousel intro section -->
+            <section id="text-carousel-intro-section" class="parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/slider-bg.jpg);">
+                <div class="container">
+                    <div class="caption text-center text-white" data-stellar-ratio="0.7">
+                        <div id="owl-intro-text" class="owl-carousel">
+                            <div class="item">
+                                    <h1>Top SSC positions available</h1>
+                                    <p>Job opportunities in shared services for top companies</p>
+                            </div>
+                            <div class="item">
+                                    <h1>Office jobs advice & more</h1>
+                                    <p>Always be on top of the latest trends & policies</p>
+                            </div>
+                            <div class="item">
+                                    <h1>Smart choice for smart people</h1>
+                                    <p>Never miss you next perfect job opportunity</p>
+                            </div>
+                        </div>
+                    </div> <!-- /.caption -->
+                </div> <!-- /.container -->
+            </section>
+			<!-- End text carousel intro section -->
+        
+        
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            <script src="{{ asset('inc/jquery/jquery-1.11.1.min.js') }}"></script>
+            <script src="{{ asset('inc/bootstrap/js/bootstrap.min.js') }}"></script>
+            <script src="{{ asset('inc/owl-carousel/js/owl.carousel.min.js') }}"></script>
+            <script src="{{ asset('inc/stellar/js/jquery.stellar.min.js') }}"></script>
+            <script src="{{ asset('inc/animations/js/wow.min.js') }}"></script>
+            <script src="{{ asset('inc/waypoints.min.js') }}"></script>
+            <script src="{{ asset('inc/isotope.pkgd.min.js') }}"></script>
+            <script src="{{ asset('inc/classie.js') }}"></script>
+            <script src="{{ asset('inc/jquery.easing.min.js') }}"></script>
+            <script src="{{ asset('inc/jquery.counterup.min.js') }}"></script>
+            <script src="{{ asset('inc/smoothscroll.js') }}"></script>
+            <script src="{{ asset('js/main.js') }}"></script>
+            <script src="{{ asset('js/theme.js') }}"></script>
+        {% endblock %}
     </body>
 </html>
