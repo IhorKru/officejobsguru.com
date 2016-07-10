@@ -104,7 +104,7 @@ class Subscriber
 
     /**
      * @var bool
-     * Assert\NotBlank (message ="You must agree to recieve notifications from partners of OfficeJobsGuru.com")
+     * @Assert\NotBlank (message ="You must agree to recieve notifications from partners of OfficeJobsGuru.com")
      * @ORM\Column(name="agree_partners", type="boolean")
      */
     private $agreePartners;
