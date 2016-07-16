@@ -56,17 +56,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                       </button>
-                      <a class="navbar-brand page-scroll" href="index.html">OfficeJobsGuru</a>
+                      <a class="navbar-brand page-scroll" href="{{ path('index') }}">OfficeJobsGuru</a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="font-color: #D81508">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a class="page-scroll" href="{{ path('index') }}">Home</a></li>
-                            <li><a class="page-scroll" href="#about-section">About</a></li>
-                            <li><a class="page-scroll" href="#services-section">Services</a></li>
-                            <li><a class="page-scroll" href="#portfolio-section">Works</a></li>                         
-                            <li><a class="page-scroll" href="#prices-section">Why Us</a></li>
+                            <li><a class="page-scroll" href="{{ path('index') }}#services-section">Services</a></li>
+                            <li><a class="page-scroll" href="{{ path('index') }}#portfolio-section">Works</a></li>                         
+                            <li><a class="page-scroll" href="{{ path('index') }}#prices-section">Why Us</a></li>
                             <li><a class="page-scroll" href="{{ path('terms') }}">Terms</a></li>
                             <li><a class="page-scroll" href="{{ path('privacy') }}">Privacy</a></li>
                             <li><a class="page-scroll" href="{{ path('unsubscribe') }}">Unsubscribe</a></li>
@@ -90,7 +89,7 @@
             <div class="cover"></div>
             
                 <!-- Begin page header-->
-                <div class="page-header-wrapper">
+                <div class="page-header-wrapper" style="position:relative;">
                     <div class="container">
                         <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
                             <h2>Contacts</h2>
@@ -110,10 +109,7 @@
                                     <h4>Our Address</h4>
                                     <ul class="contact-address">
                                         <li><i class="fa fa-map-marker fa-lg"></i>&nbsp; 100 Limpbiscayne Blvd. (North) 17st Floor ,<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; New World Tower New York ,<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; New York, USA, 33148</li>
-                                        <li><i class="fa fa-phone"></i>&nbsp; 1 -234 -456 -7890</li>
-                                        <li><i class="fa fa-print"></i>&nbsp; 1 -234 -456 -7890</li>
-                                        <li><i class="fa fa-envelope"></i> info@yourdomain.com</li>
-                                        <li><i class="fa fa-skype"></i> Unika-Design</li>
+                                        <li><i class="fa fa-envelope"></i> support@officejobsguru.com</li>
                                     </ul>
                                 </div>
                             </div>
