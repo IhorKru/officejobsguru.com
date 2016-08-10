@@ -51,19 +51,25 @@
                         </div>
                         <div class="picklist-style">
                             <div class="checkbox input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
-                                {{ form_widget(form1.agreeterms) }}
-                                <lable> {{ 'I have read and agreed to ' }} <a href="{{ path('terms') }}" target="_blank"> {{ 'Terms & Conditions' }} </a> </lable>
-                                {{ form_row(form1.agreeterms) }}
+                                {% for field in form1.optindetails %}
+                                    {{ form_widget(field.agreeterms) }}
+                                    <lable> {{ 'I have read and agreed to ' }} <a href="{{ path('terms') }}" target="_blank"> {{ 'Terms & Conditions' }} </a> </lable>
+                                    {{ form_row(field.agreeterms) }}
+                                {% endfor %}   
                             </div>
                             <div class="checkbox input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
-                                {{ form_widget(form1.agreeemails) }}
-                                <lable> {{ 'I want to get emails from OfficeJobsGuru.com' }} </lable>
-                                {{ form_row(form1.agreeemails) }}
+                               {% for field in form1.optindetails %}
+                                    {{ form_widget(field.agreeemails) }}
+                                    <lable> {{ 'I want to get emails from OfficeJobsGuru.com' }} </lable>
+                                    {{ form_row(field.agreeemails) }}
+                                {% endfor %}  
                             </div>
                             <div class="checkbox input-group margin-bottom-sm col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
-                                {{ form_widget(form1.agreepartners) }}
-                                <lable> {{ 'I want to get mails from Partners of OfficeJobsGuru.com' }} </lable>
-                                {{ form_row(form1.agreepartners) }}
+                                {% for field in form1.optindetails %}
+                                    {{ form_widget(field.agreepartners) }}
+                                    <lable> {{ 'I want to get mails from Partners of OfficeJobsGuru.com' }} </lable>
+                                    {{ form_row(field.agreepartners) }}
+                                {% endfor %}
                             </div>
                         </div>
                         <div style="padding-top:1%; padding-bottom:8%;">    
