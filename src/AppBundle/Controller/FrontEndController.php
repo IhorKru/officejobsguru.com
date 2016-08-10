@@ -100,12 +100,11 @@ class FrontEndController extends Controller
                     ->setFrom(array('relaxstcom@gmail.com' => 'OfficeJobsGuru Support Team'))
                     ->setTo($newSubscriber->getEmailAddress())
                     ->setContentType("text/html")
-                    ->setBody($this->renderView('FrontEnd/emailSubscribe.html.twig', array(
-                            'url' => $urlButton, 
-                            'name' => $newSubscriber->getFirstname(),
-                            'lastname' => $newSubscriber->getLastname(),
-                            'email' => $newSubscriber->getEmailAddress()
-                        )));
+                    ->setBody($this->renderView('FrontEnd/emailSubscribe.html.twig', [
+                        'url' => $urlButton, 
+                        'name' => $newSubscriber->getFirstname(),
+                        'lastname' => $newSubscriber->getLastname(),
+                        'email' => $newSubscriber->getEmailAddress()]));
 
                 //send email
                 $this->get('mailer')->send($message);
@@ -286,12 +285,12 @@ class FrontEndController extends Controller
                         ->setFrom(array('relaxstcom@gmail.com' => 'Jobbery Support Team'))
                         ->setTo($subscriber->getEmailAddress())
                         ->setContentType("text/html")
-                        ->setBody($this->renderView('FrontEnd/emailUnsubscribe.html.twig', array(
+                        ->setBody($this->renderView('FrontEnd/emailUnsubscribe.html.twig', [
                             'url' => $urlButton, 
                             'name' => $subscriber->getFirstname(),
                             'lastname' => $subscriber->getLastname(),
                             'email' => $subscriber->getEmailAddress()
-                        )));
+                            ]));
 
                     $this->get('mailer')->send($message);
                     return $this->redirect($this->generateUrl('sorryunsubscribe'));
