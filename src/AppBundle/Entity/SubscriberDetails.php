@@ -77,7 +77,7 @@ class SubscriberDetails
 
     /**
      * @var int
-     * @Assert\NotBlank (message="Complete Gender field")
+     * 
      * @ORM\Column(name="gender", type="smallint")
      */
     private $gender;

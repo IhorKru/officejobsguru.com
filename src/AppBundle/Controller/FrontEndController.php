@@ -14,7 +14,6 @@ use AppBundle\Entity\SubscriberOptOutDetails;
 use AppBundle\Entity\Contact;
 use AppBundle\Form\SubscriberType;
 use AppBundle\Form\SubscriberOptOutType;
-use AppBundle\Form\SubscriberOptInType;
 use AppBundle\Form\ContactType;
 use Swift_Message;
 
@@ -45,7 +44,7 @@ class FrontEndController extends Controller
                 $lastname = $form1['lastname']->getData();
                 $emailaddress = $form1['emailaddress']->getData();
                 $phone = $form1['phone']->getData();
-                $gender = $form1['gender']->getData();
+                $age = $form1['age']->getData();
                 foreach ($form1->get('optindetails') as $subForm) {
                     $agreeterms = $subForm['agreeterms']->getData();
                 }
@@ -65,13 +64,13 @@ class FrontEndController extends Controller
                     $newSubscriber ->setLastname($lastname);
                     $newSubscriber ->setEmailaddress($emailaddress);
                     $newSubscriber ->setPhone($phone);
-                    $newSubscriber ->setAge(-1);
-                    $newSubscriber ->setGender($gender);
+                    $newSubscriber ->setAge($age);
+                    $newSubscriber ->setGender(-1);
                     $newSubscriber ->setEducationLevelId(-1);
                     $newSubscriber ->setHash($hash);
                     
                     $newOptInDetails ->setUser($newSubscriber);
-                    $newOptInDetails ->setResourceid(1);
+                    $newOptInDetails ->setResourceid(5);
                     $newOptInDetails ->setAgreeterms($agreeterms);
                     $newOptInDetails ->setAgreeemails($agreeemails);
                     $newOptInDetails ->setAgreepartners($agreepartners);
@@ -84,7 +83,7 @@ class FrontEndController extends Controller
                 } else {
                     
                     $newOptInDetails ->setUser($entity);
-                    $newOptInDetails ->setResourceid(1);
+                    $newOptInDetails ->setResourceid(5);
                     $newOptInDetails ->setAgreeterms($agreeterms);
                     $newOptInDetails ->setAgreeemails($agreeemails);
                     $newOptInDetails ->setAgreepartners($agreepartners);
@@ -170,22 +169,28 @@ class FrontEndController extends Controller
      * @Method("GET")
      */
     public function verifyEmailAction(Request $request, $emailaddress) {
+        $newOptInDetails = new SubscriberOptInDetails();
+        $subscriber = new SubscriberDetails();
+        
         $em = $this->getDoctrine()->getManager();
-        $subscriber = $em->getRepository('AppBundle:Subscriber')->findOneByEmailaddress($emailaddress);
+        $subscriber = $em->getRepository('AppBundle:SubscriberDetails') ->findOneBy(['emailaddress' => $emailaddress]);
+        $userid = $subscriber ->getId();
 
         if(!$subscriber) {
             throw $this->createNotFoundException('U bettr go awai!');
         }
 
         $equals = (strcmp($subscriber->getHash(), $request->get("id", "")) === 0 && strcmp($subscriber->getEmailAddress(), $emailaddress) === 0);
-        if($equals) {
-            $subscriber->setSubscriptionDate(new DateTime());
-            $subscriber->setSubscriptionIp($_SERVER['REMOTE_ADDR']);
-            $em->persist($subscriber);
+        if(!$newOptInDetails) {
+            throw $this->createNotFoundException('U bettr go awai!');
+        } else {
+            $newOptInDetails = $em ->getRepository('AppBundle:SubscriberOptInDetails') ->findOneBy(['user' => $userid]);
+            $newOptInDetails ->setOptindate(new DateTime());
+            $newOptInDetails ->setOptinip($_SERVER['REMOTE_ADDR']);
+            $em->persist($newOptInDetails);
             $em->flush();
             return $this->redirect($this->generateUrl('index'));
         }
-        return $this->redirect($this->generateUrl('index'));
     }
     
     /**
@@ -238,19 +243,22 @@ class FrontEndController extends Controller
      * @Method("GET")
      */
     public function verifyUnsubscribeAction(Request $request, $emailaddress) {
+        $newOptOutDetails = new SubscriberOptOutDetails();
         $em = $this->getDoctrine()->getManager();
-        $subscriber = $em->getRepository('AppBundle:Subscriber')->findOneByEmailaddress($emailaddress);
-
+        $subscriber = $em->getRepository('AppBundle:SubscriberDetails') ->findOneBy(['emailaddress' => $emailaddress]);
+        
         if(!$subscriber) {
             throw $this->createNotFoundException('U bettr go awai!');
-        }
-
-        $equals = (strcmp($subscriber->getHash(), $request->get("id", "")) === 0 && strcmp($subscriber->getEmailaddress(), $emailaddress) === 0);
-        if($equals) {
-            $subscriber->setUnsubscriptionDate(new \DateTime());
-            $subscriber->setUnsubscriptionIp($_SERVER['REMOTE_ADDR']);
+        } else {
+            $newOptOutDetails ->setEmailAddress($emailaddress);
+            $newOptOutDetails ->setUser($subscriber);
+            $newOptOutDetails ->setResourceid(5);
+            $newOptOutDetails ->setOptoutdate(new DateTime());
+            $newOptOutDetails ->setOptoutip($_SERVER['REMOTE_ADDR']);
+            $em->persist($newOptOutDetails);        
             $em->flush();
         }
+
         return $this->redirect($this->generateUrl('index'));
     }
     
@@ -259,38 +267,31 @@ class FrontEndController extends Controller
     */
     public function unsubscribeAction(Request $request) {   
         $error = 0;
-        $unsubscriber = new Unsubscriber();
+        $unsubscriber = new SubscriberOptOutDetails();
         
-        $form = $this->createForm(UnsubscriberType::class, $unsubscriber, array(
+        $form = $this->createForm(SubscriberOptOutType::class, $unsubscriber, [
             'action' => $this->generateUrl('unsubscribe'),
-            'method' => 'POST'
-        ));
+            'method' => 'POST']);
         
         $form->handleRequest($request);
         
-        $newContact = new Contact();
-        $form2 = $this->createForm(ContactType::class, $newContact, array(
-            'action' => $this -> generateUrl('index'),
-            'method' => 'POST'
-            ));
-        
         if($form->isValid() && $form->isSubmitted()) {
             $em = $this->getDoctrine()->getManager();
-            $subscriber = $em->getRepository('AppBundle:Subscriber')->findOneByEmailaddress($unsubscriber->getEmailAddress());
+            $subscriber = $em->getRepository('AppBundle:SubscriberDetails')->findOneByEmailaddress($unsubscriber->getEmailaddress());
 
             if($subscriber) {
                     $urlButton = $this->generateEmailUrl(($request->getLocale() === 'ru' ? '/ru/' : '/') . 'verify/unsubscribe/' . $subscriber->getEmailAddress() . '?id=' . urlencode($subscriber->getHash()));
                     $message = Swift_Message::newInstance()
-                        ->setSubject('FinSensitive | We are sorry you are leaving us')
-                        ->setFrom(array('relaxstcom@gmail.com' => 'FinSensitive Support Team'))
+                        ->setSubject('OfficeJobsGuru | We are sorry you are leaving us')
+                        ->setFrom(array('relaxstcom@gmail.com' => 'Jobbery Support Team'))
                         ->setTo($subscriber->getEmailAddress())
                         ->setContentType("text/html")
-                        ->setBody($this->renderView('FrontEnd/emailUnsubscribe.html.twig',[
-                            'name'=> $subscriber->getFirstname(),
-                            'lastname'=>$subscriber->getLastname(),
-                            'email'=> $subscriber->getEmailAddress(),
-                            'url' => $urlButton
-                        ]));
+                        ->setBody($this->renderView('FrontEnd/emailUnsubscribe.html.twig', array(
+                            'url' => $urlButton, 
+                            'name' => $subscriber->getFirstname(),
+                            'lastname' => $subscriber->getLastname(),
+                            'email' => $subscriber->getEmailAddress()
+                        )));
 
                     $this->get('mailer')->send($message);
                     return $this->redirect($this->generateUrl('sorryunsubscribe'));
@@ -298,14 +299,17 @@ class FrontEndController extends Controller
                 $error = 1;
             }
         }
+        
+        $newContact = new Contact();
+        $form2 = $this->createForm(ContactType::class, $newContact, [
+            'action' => $this -> generateUrl('index'), 
+            'method' => 'POST']);
+        
+        return $this->render('FrontEnd/unsubscribe.html.twig', [
+            'form' => $form->createView(), 
+            'form2' => $form2->createView(), 'error' => $error]);
 
-        return $this->render('FrontEnd/unsubscribe.html.twig', array(
-            'form' => $form->createView(),
-            'form2' => $form2->createView(),
-            'error' => $error
-        ));
-
-    } 
+    }    
     
     /**
     * @Route("sorryunsubscribe", name="sorryunsubscribe")
@@ -313,10 +317,9 @@ class FrontEndController extends Controller
     public function sorryunsubscribeAction(Request $request)
     {   
         $newContact = new Contact();
-        $form2 = $this->createForm(ContactType::class, $newContact, array(
+        $form2 = $this->createForm(ContactType::class, $newContact, [
             'action' => $this -> generateUrl('index'),
-            'method' => 'POST'
-            ));
+            'method' => 'POST']);
         return $this->render('FrontEnd/sorryunsubscribe.html.twig', [
             'form2' => $form2 -> CreateView()
         ]);
