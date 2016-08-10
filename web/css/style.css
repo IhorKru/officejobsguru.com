@@ -1274,3 +1274,7 @@ p.subtitle {
     -webkit-border-radius: 4px;
     behavior: url(border-radius.htc);
 }
+
+.bigimg {
+    background-image: url(../img/slider-bg.jpg);
+}
