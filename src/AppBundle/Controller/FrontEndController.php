@@ -97,15 +97,14 @@ class FrontEndController extends Controller
                 $urlButton = $this->generateEmailUrl(($request->getLocale() === 'ru' ? '/ru/' : '/') . 'verify/' . $newSubscriber->getEmailAddress() . '?id=' . urlencode($hash));
                 $message = Swift_Message::newInstance()
                     ->setSubject('OfficeJobsGuru.com | Complete Registration')
-                    ->setFrom(array('relaxstcom@gmail.com' => 'OfficeJobsGuru Support Team'))
+                    ->setFrom(['relaxstcom@gmail.com' => 'OfficeJobsGuru Support Team'])
                     ->setTo($newSubscriber->getEmailAddress())
                     ->setContentType("text/html")
-                    ->setBody($this->renderView('FrontEnd/emailSubscribe.html.twig', array(
-                            'url' => $urlButton, 
-                            'name' => $newSubscriber->getFirstname(),
-                            'lastname' => $newSubscriber->getLastname(),
-                            'email' => $newSubscriber->getEmailAddress()
-                        )));
+                    ->setBody($this->renderView('FrontEnd/emailSubscribe.html.twig', [
+                        'url' => $urlButton, 
+                        'name' => $newSubscriber->getFirstname(),
+                        'lastname' => $newSubscriber->getLastname(),
+                        'email' => $newSubscriber->getEmailAddress()]));
 
                 //send email
                 $this->get('mailer')->send($message);
@@ -283,15 +282,15 @@ class FrontEndController extends Controller
                     $urlButton = $this->generateEmailUrl(($request->getLocale() === 'ru' ? '/ru/' : '/') . 'verify/unsubscribe/' . $subscriber->getEmailAddress() . '?id=' . urlencode($subscriber->getHash()));
                     $message = Swift_Message::newInstance()
                         ->setSubject('OfficeJobsGuru | We are sorry you are leaving us')
-                        ->setFrom(array('relaxstcom@gmail.com' => 'Jobbery Support Team'))
+                        ->setFrom(['relaxstcom@gmail.com' => 'Jobbery Support Team'])
                         ->setTo($subscriber->getEmailAddress())
                         ->setContentType("text/html")
-                        ->setBody($this->renderView('FrontEnd/emailUnsubscribe.html.twig', array(
+                        ->setBody($this->renderView('FrontEnd/emailUnsubscribe.html.twig', [
                             'url' => $urlButton, 
                             'name' => $subscriber->getFirstname(),
                             'lastname' => $subscriber->getLastname(),
                             'email' => $subscriber->getEmailAddress()
-                        )));
+                            ]));
 
                     $this->get('mailer')->send($message);
                     return $this->redirect($this->generateUrl('sorryunsubscribe'));
