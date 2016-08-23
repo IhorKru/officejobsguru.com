@@ -1278,3 +1278,15 @@ p.subtitle {
 .bigimg {
     background-image: url(../img/slider-bg.jpg);
 }
+
+.imigeone {
+    background-image: url(../img/testimonial-bg.jpg);
+}
+
+.imagetwo {
+    background-image: url(../img/map-bg.jpg);
+}
+
+.imagethree {
+    background-image: url(../img/counter-bg.jpg);
+}
