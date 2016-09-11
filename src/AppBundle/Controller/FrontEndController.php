@@ -305,7 +305,7 @@ class FrontEndController extends Controller
                     $urlButton = $this->generateEmailUrl(($request->getLocale() === 'ru' ? '/ru/' : '/') . 'verify/unsubscribe/' . $subscriber->getEmailAddress() . '?id=' . urlencode($subscriber->getHash()));
                     $message = Swift_Message::newInstance()
                         ->setSubject('OfficeJobsGuru | We are sorry you are leaving us')
-                        ->setFrom(['support@officejobsguru.com' => 'Jobbery Support Team'])
+                        ->setFrom(['support@officejobsguru.com' => 'OfficeJobsGuru Support Team'])
                         ->setTo($subscriber->getEmailAddress())
                         ->setContentType("text/html")
                         ->setBody($this->renderView('FrontEnd/emailUnsubscribe.html.twig', [
