@@ -106,7 +106,20 @@ class SubscriberDetails
      */
     private $sourceid;
     
+    /**
+     * Set id
+     *
+     * @param integer $id
+     *
+     * @return SubscriberDetails
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
 
+        return $this;
+    }
+    
     /**
      * Get id
      *
@@ -341,5 +354,29 @@ class SubscriberDetails
     public function getSourceid()
     {
         return $this->sourceid;
+    }
+
+    /**
+     * Add optindetail
+     *
+     * @param \AppBundle\Entity\SubscriberOptInDetails $optindetail
+     *
+     * @return SubscriberDetails
+     */
+    public function addOptindetail(\AppBundle\Entity\SubscriberOptInDetails $optindetail)
+    {
+        $this->optindetails[] = $optindetail;
+
+        return $this;
+    }
+
+    /**
+     * Remove optindetail
+     *
+     * @param \AppBundle\Entity\SubscriberOptInDetails $optindetail
+     */
+    public function removeOptindetail(\AppBundle\Entity\SubscriberOptInDetails $optindetail)
+    {
+        $this->optindetails->removeElement($optindetail);
     }
 }

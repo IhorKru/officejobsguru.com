@@ -9,7 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * SubscriberOptOutDetails
  *
- * @ORM\Table(name="subscriber_opt_out_details", uniqueConstraints={@ORM\UniqueConstraint(name="subsc_optout_pkey", columns={"id"})})
+ * @ORM\Table(name="03_SubscriberOptOutDetails", uniqueConstraints={@ORM\UniqueConstraint(name="subsc_optout_pkey", columns={"id"})})
  * @ORM\Entity(repositoryClass="AppBundle\Repository\SubscriberOptOutDetailsRepository")
  */
 class SubscriberOptOutDetails
@@ -19,7 +19,7 @@ class SubscriberOptOutDetails
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * 
      */
     private $id;
 
@@ -65,6 +65,19 @@ class SubscriberOptOutDetails
     private $optoutip;
 
 
+     /**
+     * Set id
+     *
+     * @param integer $id
+     *
+     * @return SubscriberOptOutDetails
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
     /**
      * Get id
      *
@@ -218,4 +231,5 @@ class SubscriberOptOutDetails
     {
         return $this->user;
     }
+
 }
