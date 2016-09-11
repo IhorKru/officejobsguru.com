@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * SubscriberOptInDetails
  *
- * @ORM\Table(name="subscriber_opt_in_details", uniqueConstraints={@ORM\UniqueConstraint(name="subsc_optin_pkey", columns={"id"})})
+ * @ORM\Table(name="02_SubscriberOptInDetails", uniqueConstraints={@ORM\UniqueConstraint(name="subsc_optin_pkey", columns={"id"})})
  * @ORM\Entity(repositoryClass="AppBundle\Repository\SubscriberOptInDetailsRepository")
  */
 class SubscriberOptInDetails
@@ -19,14 +19,14 @@ class SubscriberOptInDetails
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * 
      */
     private $id;
 
     /**
      * @var int
      *
-     * @ORM\ManyToOne(targetEntity="SubscriberDetails", cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="SubscriberDetails", inversedBy="optindetails", cascade={"persist"})
      */
     private $user;
 
@@ -72,6 +72,19 @@ class SubscriberOptInDetails
      */
     private $optinip;
 
+    /**
+     * Set id
+     *
+     * @param integer $id
+     *
+     * @return SubscriberOptInDetails
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
 
     /**
      * Get id
