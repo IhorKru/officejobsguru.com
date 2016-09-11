@@ -5,17 +5,20 @@ namespace AppBundle\Entity;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
-
+use AppBundle\Entity\SubscriberOptInDetails;
 
 /**
  * SubscriberDetails
  *
- * @ORM\Table(name="subscriber_details", uniqueConstraints={@ORM\UniqueConstraint(name="subsc_details_pkey", columns={"id"})})
+ * @ORM\Table(name="01_SubscriberDetails", uniqueConstraints={@ORM\UniqueConstraint(name="subsc_details_pkey", columns={"id"})})
  * @ORM\Entity(repositoryClass="AppBundle\Repository\SubscriberDetailsRepository")
  */
 class SubscriberDetails
 {
     
+    /**
+     *@ORM\OneToMany(targetEntity="SubscriberOptInDetails", mappedBy="user", cascade={"persist"})
+     */
     private $optindetails;
             
     public function __construct()
@@ -26,9 +29,9 @@ class SubscriberDetails
     /**
      * @var int
      *
-     * @ORM\Column(name="id", type="integer")
+     * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * 
      */
     private $id;
 

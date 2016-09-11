@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Contact
  *
- * @ORM\Table(name="contact")
+ * @ORM\Table(name="04_ContactFormDetails", uniqueConstraints={@ORM\UniqueConstraint(name="contact_pkey", columns={"id"})} )
  * @ORM\Entity(repositoryClass="AppBundle\Repository\ContactRepository")
  */
 class Contact
@@ -17,7 +17,7 @@ class Contact
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * 
      */
     private $id;
 
@@ -50,6 +50,20 @@ class Contact
     private $message;
 
 
+    /**
+     * Set id
+     *
+     * @param integer id
+     *
+     * @return Contact
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+    
     /**
      * Get id
      *
