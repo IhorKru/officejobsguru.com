@@ -9,24 +9,4 @@ parameters:
     mailer_host: localhost
     mailer_user: support@officejobsguru.com
     mailer_password: 80506043850Qq
-#    #PostgreSQL test logins
-#    database_host: 127.0.0.1
-#    database_port: 5432
-#    database_name: MediaBayProd
-#    database_user: postgres
-#    database_password: 80506043850Qq
-#    mailer_transport: gmail
-#    mailer_host: smtp.gmail.com
-#    mailer_user: kruchynenko@gmail.com
-#    mailer_password: 775247729
-#    This are test credentials for local database
-#    database_host: 127.0.0.1
-#    database_port: 8889
-#    database_name: mediazmj_MediaBayProd
-#    database_user: mediazmj
-#    database_password: 3+f9mJ5#1n0q
-#    mailer_transport: gmail
-#    mailer_host: smtp.gmail.com
-#    mailer_user: kruchynenko@gmail.com
-#    mailer_password: 775247729
     secret: b62ca12febce8b7cdbe5ee0010e8170eced7169f
